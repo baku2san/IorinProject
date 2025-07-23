@@ -1,0 +1,6 @@
+<svg width="800" height="600" xmlns="http://www.w3.org/2000/svg">
+  <rect width="100%" height="100%" fill="#0a192f"/>
+  <circle cx="400" cy="300" r="150" fill="#172a45"/>
+  <rect x="250" y="250" width="300" height="100" fill="#303f9f"/>
+  <text x="50%" y="50%" font-family="Arial" font-size="32" fill="white" text-anchor="middle">Space Station</text>
+</svg>

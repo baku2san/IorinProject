@@ -1,0 +1,82 @@
+.main-menu {
+  text-align: center;
+  max-width: 600px;
+  width: 100%;
+  padding: 3rem;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 0.8s ease-out;
+}
+
+.title {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  font-weight: 400;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.menu-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  align-items: center;
+}
+
+.menu-button {
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  min-width: 220px;
+  backdrop-filter: blur(5px);
+}
+
+.menu-button:hover {
+  background: rgba(255, 255, 255, 0.3);
+  border-color: rgba(255, 255, 255, 0.5);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+}
+
+.menu-button:active {
+  transform: translateY(0);
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  opacity: 0.9;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .main-menu {
+    padding: 2rem;
+    max-width: 90%;
+  }
+  
+  .title {
+    font-size: 2rem;
+  }
+  
+  .menu-button {
+    min-width: 180px;
+  }
+}

@@ -1,0 +1,56 @@
+.choices-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.important-decision {
+  border: 2px solid #ff5722;
+  border-radius: 10px;
+  padding: 1rem;
+  background: rgba(255, 87, 34, 0.05);
+  box-shadow: 0 0 15px rgba(255, 87, 34, 0.3);
+}
+
+.important-decision-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+  color: #ff5722;
+}
+
+.important-decision-header h3 {
+  margin: 0 10px;
+  font-size: 1.2rem;
+}
+
+.important-icon {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.no-choices-message {
+  text-align: center;
+  padding: 1rem;
+  color: rgba(255, 255, 255, 0.7);
+  font-style: italic;
+}
+
+/* 選択肢が表示されるときのアニメーション */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.choices-container {
+  animation: fadeIn 0.5s ease-out;
+}

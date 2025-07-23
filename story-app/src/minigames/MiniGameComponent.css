@@ -1,0 +1,220 @@
+/* ミニゲームコンポーネントのスタイル */
+.minigame-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.9);
+  display: flex;
+  flex-direction: column;
+  z-index: 1000;
+}
+
+.minigame-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.minigame-info {
+  display: flex;
+  gap: 2rem;
+  color: white;
+  font-size: 1.1rem;
+}
+
+.minigame-info span {
+  padding: 0.5rem 1rem;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 0.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.score {
+  color: #4ade80;
+  font-weight: bold;
+}
+
+.time {
+  color: #f59e0b;
+  font-weight: bold;
+}
+
+.difficulty {
+  color: #8b5cf6;
+}
+
+.exit-button {
+  padding: 0.75rem 1.5rem;
+  background: #ef4444;
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.exit-button:hover:not(:disabled) {
+  background: #dc2626;
+  transform: translateY(-1px);
+}
+
+.exit-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.minigame-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  color: white;
+}
+
+.error-message {
+  background: #ef4444;
+  color: white;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+  text-align: center;
+  font-weight: bold;
+}
+
+.start-screen,
+.completion-screen {
+  text-align: center;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  padding: 3rem;
+  border-radius: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  max-width: 500px;
+  width: 100%;
+}
+
+.start-screen h3,
+.completion-screen h3 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #4ade80;
+}
+
+.start-screen p,
+.completion-screen p {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  opacity: 0.9;
+}
+
+.start-screen button {
+  padding: 1rem 2rem;
+  background: #4ade80;
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: all 0.2s;
+  margin-top: 1rem;
+}
+
+.start-screen button:hover {
+  background: #22c55e;
+  transform: translateY(-2px);
+}
+
+/* レスポンシブデザイン */
+@media (max-width: 768px) {
+  .minigame-header {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem 0.5rem;
+  }
+
+  .minigame-info {
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: center;
+  }
+
+  .minigame-content {
+    padding: 1rem;
+  }
+
+  .start-screen,
+  .completion-screen {
+    padding: 2rem 1rem;
+    margin: 0 1rem;
+  }
+}
+
+/* アニメーション */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.minigame-container {
+  animation: fadeIn 0.3s ease-out;
+}
+
+.start-screen,
+.completion-screen {
+  animation: fadeIn 0.5s ease-out;
+}
+
+/* ゲーム固有のスタイル用のクラス */
+.game-area {
+  width: 100%;
+  max-width: 800px;
+  height: 60vh;
+  background: rgba(255, 255, 255, 0.05);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  border-radius: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.game-controls {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.game-button {
+  padding: 0.75rem 1.5rem;
+  background: #3b82f6;
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.game-button:hover:not(:disabled) {
+  background: #2563eb;
+  transform: translateY(-1px);
+}
+
+.game-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
